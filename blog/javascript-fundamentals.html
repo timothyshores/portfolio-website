@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Javascript Fundamentals</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Javascript Fundamentals</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="#">Log In</a></li>
+					<li><a href="#">Sign Up</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Javascript Fundamentals</h2>
+					<p>Week 3 at Lambda School</p>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+
+					<section>
+						<h2 class="major">Binding, Constructors, String Template Literals nad Protoypes</h2>
+						<ul>
+							<h3 class="major">Binding</h3>
+							<li>Implicit binding uses the `this` keyboard to bind to an object. This is typically the object to the left of
+								the .</li>
+							<li>Every function in Javascript has call, apply and bind from the object prototype</li>
+							<li>Objects are implicitly bound while functions are explicit. DOM will use explicit binding</li>
+							<li>The difference between .call and .apply is .call accepts an arguement list while .apply accepts an array
+							</li>
+							<li> The difference between .bind and .call is that .bind stores the information for later which is typically
+								assigned a variable. Both .bind and .call accepting an argument list
+							</li>
+							<li>The spread operator or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread
+									syntax on MDN</a> uses ''...'' which renders apply useless. It allows the use of .call and .bind</li>
+							<li>Babel allows developers to write new ES6 code which will render browser compatible Javascript</li>
+							<hr />
+							<h3 class="major">Constructors</h3>
+							<li>Constructors functions that are used to to build objects. They're basically object factories.</li>
+							<li>Best practice for consturctor functions are to name them with a capital letter e.g. Person</li>
+							<li>The new keyboard applies the this binding to a constructor function and lets the Javascript interpretter
+								know that the function is a going to create a new object.</li>
+							<li>A constructor uses semicolons ; while objects are defined using commas ,</li>
+							<hr>
+							<h3 class="major">String Template Literals</h3>
+							<li>String template literal use backticks <code>``</code> for string interpolation e.g. <code>console.log(`Hello
+									${this.name}`);</code></li>
+							<hr />
+							<h3 class="major">Prototypes</h3>
+							<li>Methods are functions incide of an object</li>
+							<li>Javascript is a prototype based language rather than a class based language</li>
+							<li>Everything is an object in Javascript due to the dunder proto. Dunder refers to a double underscore.</li>
+							<li>Binding the this keyboard can be applied in a child constructor <br>
+								<code> function Child(childAttributes) { Parent.call(this, childAttributes); } </code>
+							</li>
+							<li> Protohype functions are not automatically from child objects unless explicitly stated <br>
+								<code>
+									Child.protohype = Object.create(Parent.prototype);
+								</code>
+							</li>
+							<li>New methods must be declared after the Object.create() constructor</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="inner">
+				<h2 class="major">Get in touch</h2>
+				<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt,
+					nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum
+					arcu. Quisque placerat auctor laoreet.</p>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+				<ul class="contact">
+					<li class="fa-home">
+						Untitled Inc<br />
+						1234 Somewhere Road Suite #2894<br />
+						Nashville, TN 00000-0000
+					</li>
+					<li class="fa-phone">(000) 000-0000</li>
+					<li class="fa-envelope"><a href="#">information@untitled.tld</a></li>
+					<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+					<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
+					<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled Inc. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
